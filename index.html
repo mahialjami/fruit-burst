@@ -25,11 +25,52 @@
         font-family: "Work Sans", sans-serif;
       }
 
-      #slide1:first-child {
+      .carousel > div {
+        height: 600px;
+      }
+
+      #slide1 {
         background-image: url(/images/banner1.png);
       }
       #slide2 {
         background-image: url(/images/banner2.png);
+      }
+      #slide3 {
+        background-image: url(images/banner3.png);
+      }
+      #slide4 {
+        background-image: url(images/banner4.png);
+      }
+      #meet {
+        background-image: url(images/banner1.png);
+      }
+      @media screen and (max-width: 570px) {
+        #card {
+          flex-direction: column;
+          margin: auto;
+        }
+        #searchbar {
+          display: none;
+        }
+        #fruit {
+          display: none;
+        }
+        #deal {
+          flex-direction: column;
+        }
+        #more {
+          margin: 12px;
+        }
+        #social {
+          margin: 0px;
+        }
+        #meet {
+          margin: 0px;
+          width: 100%;
+        }
+        #btn {
+          margin: 64px;
+        }
       }
     </style>
   </head>
@@ -79,318 +120,396 @@
           </ul>
         </div>
         <div>
-          <input class="p-4" placeholder="search" type="text" />
+          <input id="searchbar" class="p-4" placeholder="search" type="text" />
         </div>
       </div>
     </header>
 
-    <div class="carousel w-full">
-      <div id="slide1" class="carousel-item relative w-full">
-        <div class="w-full h-full flex justify-center items-center">
-          <p class="text-white text-6xl text-center font-bold">
-            Exotic tastes at your <br />
-            doorstep
-          </p>
-        </div>
-
-        <div
-          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-        >
-          <a href="#slide4" class="btn btn-circle">❮</a>
-          <a href="#slide2" class="btn btn-circle">❯</a>
-        </div>
-      </div>
-
-      <div id="slide2" class="carousel-item relative w-full">
-        <div class="w-full h-full flex justify-center items-center">
-          <p class="text-white text-6xl text-center font-bold">
-            Exotic tastes at your <br />
-            doorstep
-          </p>
-        </div>
-        <div
-          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-        >
-          <a href="#slide1" class="btn btn-circle">❮</a>
-          <a href="#slide3" class="btn btn-circle">❯</a>
-        </div>
-      </div>
-
-      <div id="slide3" class="carousel-item relative w-full">
-        <img src="/images/banner3.png" class="w-full" />
-        <div
-          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-        >
-          <a href="#slide2" class="btn btn-circle">❮</a>
-          <a href="#slide4" class="btn btn-circle">❯</a>
-        </div>
-      </div>
-      <div id="slide4" class="carousel-item relative w-full">
-        <img src="/images/banner4.png" class="w-full" />
-        <div
-          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-        >
-          <a href="#slide3" class="btn btn-circle">❮</a>
-          <a href="#slide1" class="btn btn-circle">❯</a>
-        </div>
-      </div>
-    </div>
     <main>
-      <section class="flex">
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure class="px-10 pt-10">
-            <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
-          </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title">12.90$ - 18.85$</h2>
-            <p>Apples</p>
-            <div class="rating rating-lg rating-half">
-              <input type="radio" name="rating-1" class="rating-hidden" />
-              <input
-                type="radio"
-                name="rating-1"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-1"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-1"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-                checked
-              />
-              <input
-                type="radio"
-                name="rating-1"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-1"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-1"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-1"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-1"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-1"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-1"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
+      <section>
+        <div class="carousel w-full">
+          <div id="slide1" class="carousel-item relative w-full">
+            <div class="w-full h-full flex justify-center items-center">
+              <p class="text-white text-6xl text-center font-bold">
+                Exotic tastes at your <br />
+                doorstep
+              </p>
+            </div>
+
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
             </div>
           </div>
-        </div>
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure class="px-10 pt-10">
-            <img src="/images/fruit7.png" alt="Shoes" class="rounded-xl" />
-          </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title">12.90$ - 18.85$</h2>
-            <p>Orange</p>
-            <div class="rating rating-lg rating-half">
-              <input type="radio" name="rating-2" class="rating-hidden" />
-              <input
-                type="radio"
-                name="rating-2"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-                checked
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
+
+          <div id="slide2" class="carousel-item relative w-full">
+            <div class="w-full h-full flex justify-center items-center">
+              <p class="text-white text-6xl text-center font-bold">
+                Exotic tastes at your <br />
+                doorstep
+              </p>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
             </div>
           </div>
-        </div>
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure class="px-10 pt-10">
-            <img src="/images/fruit8.png" alt="Shoes" class="rounded-xl" />
-          </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title">12.90$ - 18.85$</h2>
-            <p>Red Dragon</p>
-            <div class="rating rating-lg rating-half">
-              <input type="radio" name="rating-3" class="rating-hidden" />
-              <input
-                type="radio"
-                name="rating-3"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-3"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-3"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-                checked
-              />
-              <input
-                type="radio"
-                name="rating-3"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-3"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-3"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-3"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-3"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-3"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-3"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
+
+          <div id="slide3" class="carousel-item relative w-full">
+            <div class="w-full h-full flex justify-center items-center">
+              <p class="text-white text-6xl text-center font-bold">
+                Exotic tastes at your <br />
+                doorstep
+              </p>
+            </div>
+
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
             </div>
           </div>
-        </div>
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure class="px-10 pt-10">
-            <img src="/images/fruit9.png" alt="Shoes" class="rounded-xl" />
-          </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title">12.90$ - 18.85$</h2>
-            <p>Banana</p>
-            <div class="rating rating-lg rating-half">
-              <input type="radio" name="rating-4" class="rating-hidden" />
-              <input
-                type="radio"
-                name="rating-4"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-                checked
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                class="bg-green-500 mask mask-star-2 mask-half-1"
-              />
-              <input
-                type="radio"
-                name="rating-4"
-                class="bg-green-500 mask mask-star-2 mask-half-2"
-              />
+          <div id="slide4" class="carousel-item relative w-full">
+            <div class="w-full h-full flex justify-center items-center">
+              <p class="text-white text-6xl text-center font-bold">
+                Exotic tastes at your <br />
+                doorstep
+              </p>
+            </div>
+
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="mx-36 my-28">
+
+      <section>
+        <div id="fruit" class="flex justify-center bg-white m-16">
+          <div class="m-6">
+            <img class="w-24" src="images/fruit1.png" />
+            <p>Strawbery</p>
+          </div>
+
+          <div class="m-6">
+            <img class="w-20" src="images/fruit2.png" />
+            <p>Orange</p>
+          </div>
+          <div class="m-6">
+            <img class="w-24" src="images/fruit3.png" />
+            <p>Mango</p>
+          </div>
+          <div class="m-6">
+            <img class="w-24" src="images/fruit4.png" />
+            <p>Strawbery</p>
+          </div>
+          <div class="m-6">
+            <img class="w-24" src="images/fruit5.png" />
+            <p>Mango</p>
+          </div>
+        </div>
+        <div id="deal" class="flex justify-between m-12">
+          <div>
+            <p class="text-2xl font-bold">Deal of the day</p>
+            <p>
+              Contrary to popular belief, is not simply random text. It has
+              roots in a piece of classical <br />
+              Latin literature from 45 BC, making it over 2000 years old.
+            </p>
+          </div>
+          <div>
+            <div class="flex">
+              <div class="m-6">
+                <p class="text-2xl font-bold">29:</p>
+                <p>Days</p>
+              </div>
+              <div class="m-6">
+                <p class="text-2xl font-bold">15 :</p>
+                <p>Hours</p>
+              </div>
+              <div class="m-6">
+                <p class="text-2xl font-bold">25 :</p>
+                <p>Minutes</p>
+              </div>
+              <div class="m-6">
+                <p class="text-2xl font-bold">08</p>
+                <p>Seconds</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div id="card" class="flex">
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">12.90$ - 18.85$</h2>
+              <p>Apples</p>
+              <div class="rating rating-lg rating-half">
+                <input type="radio" name="rating-1" class="rating-hidden" />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/fruit7.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">12.90$ - 18.85$</h2>
+              <p>Orange</p>
+              <div class="rating rating-lg rating-half">
+                <input type="radio" name="rating-2" class="rating-hidden" />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/fruit8.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">12.90$ - 18.85$</h2>
+              <p>Red Dragon</p>
+              <div class="rating rating-lg rating-half">
+                <input type="radio" name="rating-3" class="rating-hidden" />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/fruit9.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">12.90$ - 18.85$</h2>
+              <p>Banana</p>
+              <div class="rating rating-lg rating-half">
+                <input type="radio" name="rating-4" class="rating-hidden" />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-green-500 mask mask-star-2 mask-half-1"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-green-500 mask mask-star-2 mask-half-2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button id="btn" class="py-4 px-6 text-white bg-red-300 my-20 mx-96">
+            See All
+          </button>
+        </div>
+      </section>
+      <section id="meet" class="mx-36 my-28 p-20 text-white">
         <div class="justify-center text-center">
           <h1 class="text-4xl font-semibold">Meet the team section</h1>
           <p>
@@ -399,7 +518,7 @@
             over 2000 years old.
           </p>
         </div>
-        <div class="flex justify-between my-14">
+        <div class="columns-1 lg:columns-4 my-14">
           <div>
             <img class="w-16" src="images/member1.png" />
             <h5 class="text-xl">Awlad Hossain</h5>
@@ -524,13 +643,23 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="bg-neutral-950 text-white p-16">
       <div class="flex justify-center">
         <img class="w-8" src="images/logo.png" />
         <h2 class="text-xl font-semibold">Fruit Burst</h2>
       </div>
-      <div>
+      <div id="more" class="flex justify-between my-8 mx-32">
         <p>Home</p>
+        <p>About Us</p>
+        <p>Shop</p>
+        <p>Support</p>
+        <p>My account</p>
+      </div>
+      <div id="social" class="flex justify-between my-16 mx-40">
+        <img class="w-6" src="images/twitter (1).png" />
+        <img class="w-6" src="images/youtube.png" />
+        <img class="w-6" src="images/facebook.png" />
+        <img class="w-6" src="images/instagram (2).png" />
       </div>
     </footer>
   </body>
